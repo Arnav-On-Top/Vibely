@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vibely</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="player">
+            <h2>Vibely</h2>
+            <h3 id="songName">No Song Selected</h3>
+            <p id="artistName">Upload</p>
+            <audio id="audio"></audio>
+            <div class="upload">
+                <label for="musicFile">Upload MP3</label>
+                <input type="file" id="musicFile" accept=".mp3,audio/mpeg" multiple>
+            
+                </input>
+            </div>
+            <div class="search">
+                <input type="text" id="searchSong" placeholder="Search">
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progress" value="0" min="0" max="100">
+                <div class="time">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="previousSong()">Previous</button>
+                <button class="play-btn" onclick="playPause()" id="playBtn">Play</button>
+                <button onclick="nextSong()">Next</button>
+            </div>
+            <div class="extra-controls">
+                <button id="repeatBtn" onclick="repeatSong()">Repeat: 1</button>
+            </div>
+            <div class="volume">
+                <label>Volume</label>
+                <input type="range" id="volume" min="0" max="1" step="0.05" value="1">
+            </div>
+            <div class="playlist">
+                <h3>Playlist</h3>
+                <ul id="playlist"></ul>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
